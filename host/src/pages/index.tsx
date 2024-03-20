@@ -1,7 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 
-import { Text, TextJsx, TextHook } from "remote/components";
+import { Text, TextJsx } from "remote/components";
+import TextHook from "remote/components";
 
 export async function getServerSideProps() {
   return { props: { data: 'Hello from the server!' } }

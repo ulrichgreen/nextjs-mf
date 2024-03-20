@@ -2,7 +2,6 @@ import { Configuration } from 'webpack';
 
 const webpackConfig: Configuration = {
     cache: false,
-    mode: 'development',
     devtool: 'source-map',
     optimization: {
         minimize: false,
