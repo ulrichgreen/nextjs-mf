@@ -1,8 +1,7 @@
-import React from 'react';
 import Text from './text';
+import TextJsx from './text-jsx';
+import TextHook from './text-hook';
 
-export { Text };
-export const TextJsx = React.lazy(() => import('./text-jsx'));
-export const TextHook = React.lazy(() => import('./text-hook'));
+export { Text, TextJsx, TextHook };
 
-export default React.lazy(() => import('./text-hook'));
+export default TextHook

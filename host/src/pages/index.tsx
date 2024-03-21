@@ -1,8 +1,22 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+import dynamic from "next/dynamic";
 
-import { Text, TextJsx } from "remote/components";
-import TextHook from "remote/components";
+const Text = dynamic(
+  () => import('remote/components').then((test) => ({ default: test.Text })),
+  { ssr: false }
+);
+
+const TextJsx = dynamic(
+  () => import('remote/components').then((test) => ({ default: test.TextJsx })),
+  { ssr: false }
+);
+
+const TextHook = dynamic(
+  () =>
+    import('remote/components').then((test) => ({ default: test.TextHook })),
+  { ssr: false }
+);
 
 export async function getServerSideProps() {
   return { props: { data: 'Hello from the server!' } }
@@ -18,7 +32,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Feel free to toggle the text.</h1>
-        <p>{Text}</p>
+        <p><Text /></p>
         <TextJsx />
         <TextHook />
       </main>
