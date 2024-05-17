@@ -5,7 +5,6 @@ const webpackConfig: Configuration = {
     publicPath: "auto",
     clean: true,
   },
-  devtool: false,
   resolve: {
     extensions: [".tsx", ".ts"],
   },

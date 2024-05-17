@@ -11,6 +11,7 @@ const nextConfig = {
       exposes: {},
       remotes: {
         remote: `remote@http://localhost:3003/${location}/remoteEntry.js`,
+        remote2: `remote2@http://localhost:3004/${location}/remoteEntry.js`,
       },
       shared: {},
       extraOptions: {},

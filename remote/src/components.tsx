@@ -1,28 +1,26 @@
 import React from 'react';
 
-// This works with SSR
-export const Text = 'Hello from the remote!';
+type ButtonProps = {
+    label: string;
+};
 
-// This works with SSR
-export const TextJsx = () => {
+export const Button = ({ label }: ButtonProps) => {
     return (
-        <div>
-            <button>Toggle text</button>
-            <p>Text</p>
-        </div>
+        <button>{label}</button>
     );
 };
 
-// This does NOT work with SSR
-// Causes "Cannot read properties of null (reading 'useState')" in host app.
-export const TextHook = () => {
+type ToggleButtonProps = {
+    label: string;
+    content: string;
+};
+
+export const ToggleButton = ({ label, content }: ToggleButtonProps) => {
     const [show, setShow] = React.useState(false);
     return (
         <div>
-            <button onClick={() => setShow(!show)}>Toggle text</button>
-            {show && <p>Text</p>}
+            <button onClick={() => setShow(!show)}>{label}</button>
+            {show && <p>{content}</p>}
         </div>
     );
 };
-
-export default TextJsx;

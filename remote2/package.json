@@ -1,11 +1,11 @@
 {
-  "name": "remote",
+  "name": "remote2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && npm run serve",
-    "serve": "serve -d ./dist -p 3003 --cors",
+    "serve": "serve -d ./dist -p 3004 --cors",
     "build": "npm run build:client && npm run build:server",
     "build:client": "webpack --mode development --config config/webpack.client.ts",
     "build:server": "webpack --mode development --config config/webpack.server.ts"
