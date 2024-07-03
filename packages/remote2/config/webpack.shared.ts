@@ -5,7 +5,7 @@ const webpackConfig: Configuration = {
     publicPath: "auto",
     clean: true,
   },
-  devtool: false,
+  devtool: "source-map",
   resolve: {
     extensions: [".tsx", ".ts"],
   },

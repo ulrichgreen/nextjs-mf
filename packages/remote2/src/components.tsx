@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button, ToggleButton } from 'remote/components';
 
 type ButtonFederatedProps = {

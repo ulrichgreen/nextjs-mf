@@ -5,13 +5,12 @@ import sharedWebpackConfig from "./webpack.shared";
 import moduleFederationPlugin from "./module-federation";
 
 const webpackConfig: Configuration = {
-  name: "remote",
+  name: "remote2",
   output: {
-    path: path.resolve(__dirname, "../dist/server"),
-    libraryTarget: "commonjs-module",
+    path: path.resolve(__dirname, "../dist/client"),
+    publicPath: "auto",
   },
-  externals: ["react", "react-dom"],
-  plugins: [...moduleFederationPlugin.server],
+  plugins: [moduleFederationPlugin.client],
 };
 
 export default merge<Configuration>(sharedWebpackConfig, webpackConfig);

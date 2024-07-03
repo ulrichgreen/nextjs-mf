@@ -4,10 +4,10 @@ import styles from "@/styles/Home.module.css";
 import { Button, ToggleButton } from "remote/components";
 
 // If the following import (and related components below) are removed - then the app works.
-import { ButtonFederated, ToggleButtonFederated } from "remote2/components";
+//import { ButtonFederated, ToggleButtonFederated } from "remote2/components";
 
 export async function getServerSideProps() {
-  return { props: { data: 'Hello from the server!' } }
+  return { props: { data: "Hello from the server!" } };
 }
 
 export default function Home({ data }: { data: string }) {
@@ -22,9 +22,10 @@ export default function Home({ data }: { data: string }) {
         <h1>Module fedetation demo</h1>
         <p>{data}</p>
         <Button label="Button from remote" />
-        <ToggleButton label="Toggle Button from remote" content="Content from remote" />
-        <ButtonFederated label="Button from remote2" />
-        <ToggleButtonFederated label="Toggle Button from remote2" content="Content from remote2" />
+        <ToggleButton
+          label="Toggle Button from remote"
+          content="Content from remote"
+        />
       </main>
     </>
   );

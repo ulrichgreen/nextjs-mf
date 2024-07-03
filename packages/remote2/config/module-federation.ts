@@ -20,8 +20,8 @@ const clientFederationConfig = {
   remotes: {
     remote: `remote@http://localhost:3003/client/remoteEntry.js`,
   },
-  exposes: exposes,
   shared: shared,
+  exposes: exposes,
 };
 
 const serverFederationConfig = {
@@ -31,8 +31,8 @@ const serverFederationConfig = {
   remotes: {
     remote: `remote@http://localhost:3003/server/remoteEntry.js`,
   },
-  exposes: exposes,
   shared: shared,
+  exposes: exposes,
   library: { type: "commonjs-module" },
 };
 

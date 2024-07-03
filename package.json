@@ -1,0 +1,13 @@
+{
+  "name": "mf-example",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "npm run start:remote & npm run start:remote2 & npm run start:host",
+    "start:remote": "cd packages/remote && npm run start",
+    "start:remote2": "cd packages/remote2 && npm run start",
+    "start:host": "cd apps/host && npm run dev"
+  }
+}
